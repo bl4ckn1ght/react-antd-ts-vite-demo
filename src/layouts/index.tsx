@@ -1,7 +1,25 @@
-import './App.css'
+import { Outlet } from 'react-router'
+import { Layout } from 'antd'
+import React from 'react'
+import './index.less'
 
-function index() {
-	return <div className="main"></div>
+import Sider from './sider/index'
+import Navbar from './navbar/index'
+
+const { Content } = Layout
+
+const layoutIndex: React.FC = () => {
+	return (
+		<Layout className="container">
+			<Sider />
+			<Layout className="site-layout">
+				<Navbar />
+				<Content className="site-content">
+					<Outlet />
+				</Content>
+			</Layout>
+		</Layout>
+	)
 }
 
-export default index
+export default layoutIndex
