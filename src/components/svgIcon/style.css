@@ -1,0 +1,8 @@
+.svg-icon {
+  width: 2.67em;
+  height: 2.67em;
+  overflow: hidden;
+  display: inline-table;
+  vertical-align: -0.3em;
+  fill: currentColor;
+}
